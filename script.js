@@ -210,7 +210,7 @@ function carregarCarta() {
     
     // Alimenta a carta de resposta com a frente e verso do ID atual
     elImgFrente.src = `imagens1/${cartaAtual.id}choraraspitangasverso.png`;
-    elImgVerso.src = `imagens1/${cartaAtual.id}_verso.png`;
+    elImgVerso.src = `imagens1/${cartaAtual.id}choraraspitangasfrente.png`;
     
     // Reseta o estado da animação da carta para ela começar desvirada
     cartaFlip.classList.remove('virada'); 
