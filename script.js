@@ -6,7 +6,7 @@
 const dadosPerguntas = [
     {
         id: "A1",
-        texto: "Nnão é fruta doce, mas sempre aparece quando alguém reclama, com lágrimas e lamentos que parecem nunca ter fim. Quem sou eu?",
+        texto: "Não é fruta doce, mas sempre aparece quando alguém reclama, com lágrimas e lamentos que parecem nunca ter fim. Quem sou eu?",
         respostaCorreta: "frente", 
         explicacao: "Explicação correta (como as pessoas normalmente imaginam): Significa se lamentar excessivamente por algo, chorar muito por algo."
     },
