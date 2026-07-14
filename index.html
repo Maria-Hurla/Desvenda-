@@ -20,6 +20,12 @@
     <section id="tela-jogo" class="tela oculta">
         <header class="barra-superior">
             <button id="btn-regras" class="btn-secundario">Regras</button>
+            
+            <div class="progresso-container">
+                <span class="progresso-texto">CARTA</span>
+                <span class="progresso-numero"><span id="carta-atual-numero">1</span> / 20</span>
+            </div>
+
             <div class="placar-container">
                 <span class="placar-texto">PONTOS</span>
                 <span id="pontos" class="placar-numero">0</span>
@@ -29,20 +35,27 @@
         <main class="area-principal">
             
             <div class="area-pergunta">
-                <div class="carta-pergunta">
-                    <span id="numero-carta" class="badge">A1</span>
-                    <p id="texto-pergunta">Carregando pergunta...</p>
+                <div class="deck-container">
+                    <div class="carta-pergunta">
+                        <span id="numero-carta" class="badge">A1</span>
+                        <div class="imagem-pergunta-container">
+                            <img id="img-pergunta" src="imagens/placeholder.png" alt="Ilustração da Pergunta">
+                        </div>
+                        <p id="texto-pergunta">Carregando pergunta...</p>
+                    </div>
                 </div>
             </div>
 
             <div class="area-imagem">
-                <div id="carta-flip" class="carta-imagem">
-                    <div class="carta-inner">
-                        <div class="face frente">
-                            <img id="img-frente" src="imagens/placeholder.png" alt="Frente da Carta">
-                        </div>
-                        <div class="face verso">
-                            <img id="img-verso" src="imagens/placeholder.png" alt="Verso da Carta">
+                <div class="deck-container">
+                    <div id="carta-flip" class="carta-imagem">
+                        <div class="carta-inner">
+                            <div class="face frente">
+                                <img id="img-frente" src="imagens/placeholder.png" alt="Frente da Carta">
+                            </div>
+                            <div class="face verso">
+                                <img id="img-verso" src="imagens/placeholder.png" alt="Verso da Carta">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -53,7 +66,7 @@
                 <h3>Qual é a resposta certa para essa charada?</h3>
                 <div class="botoes-quiz">
                     <button class="btn-quiz" onclick="verificarResposta('frente')">A) Carta no lado da frente</button>
-                    <button class="btn-quiz" onclick="verificarResposta('verso')">B) Carta no verso</button>
+                    <button class="btn-quiz" onclick="verecerResposta('verso')">B) Carta no verso</button>
                 </div>
                 <p id="mensagem-feedback" class="mensagem oculta"></p>
             </div>
