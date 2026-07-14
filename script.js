@@ -1,20 +1,128 @@
 // ==========================================
-// DADOS DO JOGO (Pode ser transferido para um JSON no futuro)
+// DADOS DO JOGO (20 Cartas de Perguntas e Respostas)
 // ==========================================
-
-// Gerando 20 cartas (A1 a A20) para o escopo do projeto
-const dadosPerguntas = [];
-for (let i = 1; i <= 20; i++) {
-    // Definindo alternância simples para o exemplo (Frente/Verso)
-    let resposta = i % 2 === 0 ? 'verso' : 'frente';
-    
-    dadosPerguntas.push({
-        id: `A${i}`,
-        texto: `Esta é a charada misteriosa da carta A${i}. Olhe bem para a imagem. O que ela representa no contexto da nossa metáfora?`,
-        respostaCorreta: resposta,
-        explicacao: `Explicação da carta A${i}: A metáfora correta estava na face '${resposta}' da carta. Isso representa a dualidade do tema abordado.`
-    });
-}
+const dadosPerguntas = [
+    {
+        id: "A1",
+        texto: "Sou a base de tudo, mas se me molhar, eu desmorono. O que a imagem representa?",
+        respostaCorreta: "frente",
+        explicacao: "Explicação A1: A frente mostra um castelo de areia, representando a fragilidade da base."
+    },
+    {
+        id: "A2",
+        texto: "Tenho folhas, mas não sou árvore. Onde está a verdadeira resposta?",
+        respostaCorreta: "verso",
+        explicacao: "Explicação A2: O verso mostra um livro, a metáfora exata para 'folhas que não são de árvore'."
+    },
+    {
+        id: "A3",
+        texto: "Ando o dia todo e quando chega a noite, durmo com a boca aberta.",
+        respostaCorreta: "frente",
+        explicacao: "Explicação A3: A frente exibe um sapato. É a resposta clássica para esta charada."
+    },
+    {
+        id: "A4",
+        texto: "Quanto mais você tira, maior eu fico. Olhe a imagem e decida.",
+        respostaCorreta: "verso",
+        explicacao: "Explicação A4: O verso mostra um buraco no chão. Ao tirar terra, ele cresce."
+    },
+    {
+        id: "A5",
+        texto: "Tenho dentes, mas não mordo. O que sou?",
+        respostaCorreta: "frente",
+        explicacao: "Explicação A5: A frente ilustra um pente, uma metáfora visual para os 'dentes'."
+    },
+    {
+        id: "A6",
+        texto: "Voo sem asas, choro sem olhos. Qual face revela minha forma?",
+        respostaCorreta: "verso",
+        explicacao: "Explicação A6: O verso apresenta uma nuvem, que se move no céu e derrama chuva."
+    },
+    {
+        id: "A7",
+        texto: "Caio em pé e corro deitada.",
+        respostaCorreta: "frente",
+        explicacao: "Explicação A7: A imagem da chuva na frente da carta é a resposta correta."
+    },
+    {
+        id: "A8",
+        texto: "Nasço grande e morro pequeno.",
+        respostaCorreta: "verso",
+        explicacao: "Explicação A8: O verso ilustra um lápis, que diminui conforme é utilizado."
+    },
+    {
+        id: "A9",
+        texto: "Tenho cabeça e dentes, mas não sou bicho nem gente.",
+        respostaCorreta: "frente",
+        explicacao: "Explicação A9: A frente mostra um alho, famoso por sua 'cabeça' e 'dentes'."
+    },
+    {
+        id: "A10",
+        texto: "Falo todas as línguas, mas não tenho boca.",
+        respostaCorreta: "verso",
+        explicacao: "Explicação A10: O verso contém a imagem de um eco, refletindo sons do mundo."
+    },
+    {
+        id: "A11",
+        texto: "Quanto mais seca, mais molhada fica.",
+        respostaCorreta: "frente",
+        explicacao: "Explicação A11: A toalha na frente da carta absorve a água, ficando molhada."
+    },
+    {
+        id: "A12",
+        texto: "Tenho pescoço, mas não tenho cabeça.",
+        respostaCorreta: "verso",
+        explicacao: "Explicação A12: O verso ilustra uma garrafa."
+    },
+    {
+        id: "A13",
+        texto: "O que é, o que é: entra na água e não se molha?",
+        respostaCorreta: "frente",
+        explicacao: "Explicação A13: A sombra, ilustrada na frente, passa pela água intacta."
+    },
+    {
+        id: "A14",
+        texto: "Sou feito de água, mas se me colocarem na água, eu sumo.",
+        respostaCorreta: "verso",
+        explicacao: "Explicação A14: O cubo de gelo no verso derrete ao entrar em contato com a água."
+    },
+    {
+        id: "A15",
+        texto: "Tenho olhos, mas não vejo.",
+        respostaCorreta: "frente",
+        explicacao: "Explicação A15: A frente exibe um furacão, que tem um 'olho' cego em seu centro."
+    },
+    {
+        id: "A16",
+        texto: "Passo por todas as portas sem precisar abrir nenhuma.",
+        respostaCorreta: "verso",
+        explicacao: "Explicação A16: O vento, no verso, atravessa as frestas sem abrir portas."
+    },
+    {
+        id: "A17",
+        texto: "O que tem que ser quebrado antes de ser usado?",
+        respostaCorreta: "frente",
+        explicacao: "Explicação A17: O ovo na parte da frente da carta é a resposta clássica."
+    },
+    {
+        id: "A18",
+        texto: "Pertenço a você, mas os outros me usam mais do que você mesmo.",
+        respostaCorreta: "verso",
+        explicacao: "Explicação A18: O verso mostra um crachá com o seu nome."
+    },
+    {
+        id: "A19",
+        texto: "Subo quando a chuva desce.",
+        respostaCorreta: "frente",
+        explicacao: "Explicação A19: O guarda-chuva na parte da frente é aberto quando chove."
+    },
+    {
+        id: "A20",
+        texto: "Nunca faço perguntas, mas sempre exijo respostas.",
+        respostaCorreta: "verso",
+        explicacao: "Explicação A20: O telefone tocando no verso exige que alguém atenda."
+    }
+];
 
 // ==========================================
 // VARIÁVEIS GLOBAIS DE ESTADO
@@ -27,29 +135,25 @@ let cartaAtual = null;
 // ==========================================
 // SELETORES DOM
 // ==========================================
-
-// Telas
 const telaInicial = document.getElementById('tela-inicial');
 const telaJogo = document.getElementById('tela-jogo');
 const telaFinal = document.getElementById('tela-final');
 
-// Botões de Navegação
 const btnComecar = document.getElementById('btn-comecar');
 const btnReiniciar = document.getElementById('btn-reiniciar');
 
-// Elementos do Jogo
 const elPontos = document.getElementById('pontos');
+const elCartaAtualNumero = document.getElementById('carta-atual-numero');
 const elNumeroCarta = document.getElementById('numero-carta');
+const elImgPergunta = document.getElementById('img-pergunta');
 const elTextoPergunta = document.getElementById('texto-pergunta');
 const elImgFrente = document.getElementById('img-frente');
 const elImgVerso = document.getElementById('img-verso');
 const cartaFlip = document.getElementById('carta-flip');
 
-// Quiz e Feedback
 const botoesQuiz = document.querySelectorAll('.btn-quiz');
 const msgFeedback = document.getElementById('mensagem-feedback');
 
-// Modais
 const modalRegras = document.getElementById('modal-regras');
 const btnRegras = document.getElementById('btn-regras');
 const btnFecharRegras = document.getElementById('btn-fechar-regras');
@@ -61,64 +165,59 @@ const btnProximaCarta = document.getElementById('btn-proxima-carta');
 // ==========================================
 // EVENT LISTENERS BÁSICOS
 // ==========================================
-
 btnComecar.addEventListener('click', iniciarJogo);
 btnReiniciar.addEventListener('click', iniciarJogo);
 
-// Controle do Flip 3D
+// Executa o efeito de virar a carta ao clicar
 cartaFlip.addEventListener('click', () => {
     cartaFlip.classList.toggle('virada');
 });
 
-// Modal de Regras
+// Controle do Modal de Regras
 btnRegras.addEventListener('click', () => modalRegras.classList.remove('oculta'));
 btnFecharRegras.addEventListener('click', () => modalRegras.classList.add('oculta'));
 
-// Passar para a próxima carta após fechar explicação
 btnProximaCarta.addEventListener('click', avancarRodada);
 
 // ==========================================
-// FUNÇÕES PRINCIPAIS
+// FUNÇÕES PRINCIPAIS E SORTEIO
 // ==========================================
-
 function iniciarJogo() {
-    // Resetar estado
     pontuacao = 0;
     indiceAtual = 0;
     atualizarPlacar();
     
-    // Sortear Cartas
+    // Sorteia as 20 cartas de forma aleatória para não virem na mesma ordem
     cartasSorteadas = sortearArray([...dadosPerguntas]);
     
-    // Mudar Telas
     esconderTodasTelas();
     telaJogo.classList.remove('oculta');
     
-    // Carregar primeira carta
     carregarCarta();
 }
 
 function carregarCarta() {
     cartaAtual = cartasSorteadas[indiceAtual];
     
-    // Preencher dados na tela
+    elCartaAtualNumero.textContent = indiceAtual + 1;
+    
+    // Sincroniza a carta de pergunta carregando sua respectiva imagem
     elNumeroCarta.textContent = cartaAtual.id;
     elTextoPergunta.textContent = cartaAtual.texto;
+    elImgPergunta.src = `imagens/${cartaAtual.id}_pergunta.png`;
     
-    // Atualizar imagens (Garante a associação correta pelo ID)
-    // OBS: Certifique-se de ter as imagens A1_frente.png, A1_verso.png etc. na pasta /imagens/
+    // Sincroniza a carta de resposta com a frente e verso corretos do ID atual
     elImgFrente.src = `imagens/${cartaAtual.id}_frente.png`;
     elImgVerso.src = `imagens/${cartaAtual.id}_verso.png`;
     
-    // Resetar visual da rodada
-    cartaFlip.classList.remove('virada'); // Garante que a carta inicie pela frente
+    // Reseta o estado da carta de resposta (mostrando a frente no início)
+    cartaFlip.classList.remove('virada'); 
     msgFeedback.classList.add('oculta');
     
-    // Habilitar botões do quiz
     botoesQuiz.forEach(btn => btn.disabled = false);
 }
 
-// Algoritmo de Fisher-Yates para embaralhar o array sem repetições
+// Algoritmo Fisher-Yates para embaralhar as cartas sem repetição
 function sortearArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -130,13 +229,9 @@ function sortearArray(array) {
 // ==========================================
 // LÓGICA DO QUIZ
 // ==========================================
-
-// Chamado pelo onclick no HTML: verificarResposta('frente') ou ('verso')
 window.verificarResposta = function(escolha) {
-    // Desabilitar botões para impedir alteração
     botoesQuiz.forEach(btn => btn.disabled = true);
     
-    // Verificar acerto
     if (escolha === cartaAtual.respostaCorreta) {
         pontuacao++;
         atualizarPlacar();
@@ -145,7 +240,7 @@ window.verificarResposta = function(escolha) {
         mostrarFeedback(false);
     }
 
-    // Aguardar exatamente 5 segundos para exibir a explicação
+    // Aguarda 5 segundos mostrando a resposta e então abre o modal de explicação
     setTimeout(mostrarExplicacao, 5000);
 }
 
@@ -162,8 +257,6 @@ function mostrarFeedback(acertou) {
 
 function atualizarPlacar() {
     elPontos.textContent = pontuacao;
-    
-    // Pequena animação no placar
     elPontos.style.transform = "scale(1.5)";
     setTimeout(() => elPontos.style.transform = "scale(1)", 300);
 }
@@ -171,7 +264,6 @@ function atualizarPlacar() {
 // ==========================================
 // EXPLICAÇÃO E FLUXO DE RODADAS
 // ==========================================
-
 function mostrarExplicacao() {
     elTextoExplicacao.textContent = cartaAtual.explicacao;
     modalExplicacao.classList.remove('oculta');
@@ -200,17 +292,16 @@ function finalizarJogo() {
     
     if (pontuacao >= 10) {
         elTituloFinal.textContent = "Vitória!";
-        elTextoFinal.textContent = "🎉 Você conseguiu mais da metade!";
+        elTextoFinal.textContent = "🎉 Fantástico! Você completou o baralho com uma ótima pontuação!";
     } else {
         elTituloFinal.textContent = "Fim de Jogo!";
-        elTextoFinal.textContent = "👏 Você foi bem! Mas acertou menos da metade!";
+        elTextoFinal.textContent = "👏 Muito bom! Que tal tentar mais uma vez para melhorar seu recorde?";
     }
 }
 
 // ==========================================
 // UTILITÁRIOS
 // ==========================================
-
 function esconderTodasTelas() {
     telaInicial.classList.add('oculta');
     telaJogo.classList.add('oculta');
