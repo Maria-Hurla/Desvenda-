@@ -107,11 +107,11 @@ body {
 .barra-superior {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 30px;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
-.placar-container {
+.placar-container, .progresso-container {
     background: var(--branco);
     padding: 10px 30px;
     border-radius: 20px;
@@ -119,21 +119,54 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.placar-texto {
+.placar-texto, .progresso-texto {
     display: block;
     font-size: 0.9rem;
     color: #888;
     font-weight: 600;
 }
 
-.placar-numero {
+.placar-numero, .progresso-numero {
     font-size: 2rem;
     font-weight: 800;
     color: var(--roxo);
     transition: color 0.3s;
 }
 
-/* Área Principal - Grid Responsivo */
+/* Efeito de Pilha de Cartas */
+.deck-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.deck-container::before, .deck-container::after {
+    content: '';
+    position: absolute;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.deck-container::before {
+    width: 96%;
+    height: 100%;
+    top: 8px;
+    z-index: 1;
+    transform: rotate(-2deg);
+}
+
+.deck-container::after {
+    width: 92%;
+    height: 100%;
+    top: 16px;
+    z-index: 0;
+    transform: rotate(3deg);
+}
+
+/* Área Principal - Grid */
 .area-principal {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -145,11 +178,18 @@ body {
 /* Carta Pergunta */
 .carta-pergunta {
     background: var(--tons-pastel);
-    padding: 40px 20px;
+    padding: 40px 20px 20px 20px;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     position: relative;
+    z-index: 2;
+    width: 100%;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .badge {
@@ -164,9 +204,26 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+.imagem-pergunta-container {
+    width: 100%;
+    height: 180px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid var(--branco);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+
+.imagem-pergunta-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 #texto-pergunta {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 600;
 }
 
 /* Carta Imagem (Flip Card 3D) */
@@ -179,8 +236,9 @@ body {
 .carta-imagem {
     width: 260px;
     height: 380px;
-    perspective: 1000px; /* Cria o espaço 3D */
+    perspective: 1000px;
     cursor: pointer;
+    z-index: 2;
 }
 
 .carta-inner {
@@ -217,9 +275,10 @@ body {
 }
 
 .dica-clique {
-    margin-top: 15px;
+    margin-top: 25px;
     font-size: 0.9rem;
     color: #555;
+    font-weight: 600;
 }
 
 /* Quiz */
@@ -330,9 +389,14 @@ body {
 
 /* Responsividade */
 @media (max-width: 900px) {
+    .barra-superior {
+        flex-direction: column;
+        gap: 15px;
+    }
+
     .area-principal {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 50px;
     }
     
     .titulo-jogo { font-size: 2.5rem; }
