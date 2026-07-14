@@ -206,11 +206,11 @@ function carregarCarta() {
     // Alimenta a pergunta e altera o caminho da imagem correspondente
     elNumeroCarta.textContent = cartaAtual.id;
     elTextoPergunta.textContent = cartaAtual.texto;
-    elImgPergunta.src = `imagens1/${cartaAtual.id}pergunta1.png`;
+    elImgPergunta.src = `imagens1/${cartaAtual.id}_pergunta.png`;
     
     // Alimenta a carta de resposta com a frente e verso do ID atual
-    elImgFrente.src = `imagens1/${cartaAtual.id}choraraspitangasverso.png`;
-    elImgVerso.src = `imagens1/${cartaAtual.id}choraraspitangasfrente.png`;
+    elImgFrente.src = `imagens/${cartaAtual.id}_frente.png`;
+    elImgVerso.src = `imagens/${cartaAtual.id}_verso.png`;
     
     // Reseta o estado da animação da carta para ela começar desvirada
     cartaFlip.classList.remove('virada'); 
