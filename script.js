@@ -31,7 +31,7 @@ const dadosPerguntas = [
     {
         id: "A5",
         texto: "Digite aqui a pergunta para a carta A5...",
-        respostaCorreta: "frente", 
+        respostaCorreta: "verso", 
         explicacao: "Explique aqui por que a FRENTE da carta A5 é a resposta certa."
     },
     {
