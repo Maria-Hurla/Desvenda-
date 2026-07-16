@@ -54,9 +54,9 @@ const dadosPerguntas = [
     },
     {
         id: "A9",
-        texto: "Digite aqui a pergunta para a carta A9...",
+        texto: "Não é inseto de verdade, mas aparece quando a emoção toma conta.",
         respostaCorreta: "frente", 
-        explicacao: "Explique aqui por que a FRENTE da carta A9 é a resposta certa."
+        explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa representar emoções intensas, como nervosismo, ansiedade, medo, ou apaixonado."
     },
     {
         id: "A10",
