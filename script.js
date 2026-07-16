@@ -12,9 +12,9 @@ const dadosPerguntas = [
     },
     {
         id: "A2",
-        texto: "Digite aqui a pergunta para a carta A2...",
-        respostaCorreta: "verso", 
-        explicacao: "Explique aqui por que o VERSO da carta A2 é a resposta certa."
+        texto: "Lugar sem dono, sem regra e sem ordem, onde cada um manda e ninguém obedece. Quem sou eu?",
+        respostaCorreta: "frente", 
+        explicacao: "Explicação correta (como as pessoas normalmente imaginam): Significa um lugar sem regras, ordem ou autoridade, onde cada um faz o que bem entender."
     },
     {
         id: "A3",
