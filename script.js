@@ -72,9 +72,9 @@ const dadosPerguntas = [
     },
     {
         id: "A12",
-        texto: "Digite aqui a pergunta para a carta A12...",
+        texto: "Não é com a boca apenas, mas parece que não há fim na conversa.",
         respostaCorreta: "verso", 
-        explicacao: "Explique aqui por que o VERSO da carta A12 é a resposta certa."
+        explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa uma pessoa que fala demais, é tagarela, não para de conversar ou falar."
     },
     {
         id: "A13",
