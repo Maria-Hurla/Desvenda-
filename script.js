@@ -120,9 +120,9 @@ const dadosPerguntas = [
     },
     {
         id: "A20",
-        texto: "Digite aqui a pergunta para a carta A20...",
+        texto: "Quando alguém irrita muito, ele enche algo.",
         respostaCorreta: "verso", 
-        explicacao: "Explique aqui por que o VERSO da carta A20 é a resposta certa."
+        explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa uma pessoa que irrita demais."
     }
 ];
 
