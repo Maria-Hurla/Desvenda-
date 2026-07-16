@@ -78,9 +78,9 @@ const dadosPerguntas = [
     },
     {
         id: "A13",
-        texto: "Digite aqui a pergunta para a carta A13...",
+        texto: "Não decide por si mesma, apenas segue o grupo sem pensar.",
         respostaCorreta: "frente", 
-        explicacao: "Explique aqui por que a FRENTE da carta A13 é a resposta certa."
+        explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa uma pessoa sem opinião própria, que é influenciada facilmente."
     },
     {
         id: "A14",
