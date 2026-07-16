@@ -48,9 +48,9 @@ const dadosPerguntas = [
     },
     {
         id: "A8",
-        texto: "Digite aqui a pergunta para a carta A8...",
+        texto: " Não é árvore, mas ajuda, quando alguém improvisa pra resolver um problema.",
         respostaCorreta: "verso", 
-        explicacao: "Explique aqui por que o VERSO da carta A8 é a resposta certa."
+        explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa resolver um problema, desenrascar em uma situação difícil, ou prestar favor a alguém."
     },
     {
         id: "A9",
