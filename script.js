@@ -66,9 +66,9 @@ const dadosPerguntas = [
     },
     {
         id: "A11",
-        texto: "Digite aqui a pergunta para a carta A11...",
-        respostaCorreta: "verso", // Defina se é frente ou verso conforme o seu design!
-        explicacao: "Explique aqui por que o VERSO da carta A11 é a resposta certa."
+        texto: "Não é moda nem calçado, mas significa o fim da caminhada.",
+        respostaCorreta: "verso",
+        explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa morrer/falecer."
     },
     {
         id: "A12",
