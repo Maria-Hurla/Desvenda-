@@ -84,9 +84,9 @@ const dadosPerguntas = [
     },
     {
         id: "A14",
-        texto: "Digite aqui a pergunta para a carta A14...",
+        texto: " É agir devagar, com calma, depois de uma briga com alguém.",
         respostaCorreta: "verso", 
-        explicacao: "Explique aqui por que o VERSO da carta A14 é a resposta certa."
+        explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa que alguém deve agir com calma e discretamente."
     },
     {
         id: "A15",
