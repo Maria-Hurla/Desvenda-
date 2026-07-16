@@ -96,9 +96,9 @@ const dadosPerguntas = [
     },
     {
         id: "A16",
-        texto: "Digite aqui a pergunta para a carta A16...",
+        texto: "Sou uma comida, servido em pedaços pequenos e sou confundido com duas aves.",
         respostaCorreta: "verso", 
-        explicacao: "Explique aqui por que o VERSO da carta A16 é a resposta certa."
+        explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa que é um tipo de corte de carne de frango."
     },
     {
         id: "A17",
