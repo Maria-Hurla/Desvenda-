@@ -18,9 +18,9 @@ const dadosPerguntas = [
     },
     {
         id: "A3",
-        texto: "Digite aqui a pergunta para a carta A3...",
+        texto: "É confiar tanto que até se arrisca, mesmo sabendo que pode se queimar. Quem sou eu?",
         respostaCorreta: "frente", 
-        explicacao: "Explique aqui por que a FRENTE da carta A3 é a resposta certa."
+        explicacao: "Explicação correta (como as pessoas normalmente imaginam): Significa confiar totalmente em algúem, a ponto de arriscar sua reputação, segurança e bem-estar."
     },
     {
         id: "A4",
