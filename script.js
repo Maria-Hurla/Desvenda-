@@ -42,9 +42,9 @@ const dadosPerguntas = [
     },
     {
         id: "A7",
-        texto: "Digite aqui a pergunta para a carta A7...",
+        texto: "Quando o perigo aparece, o jeito é sair correndo sem olhar pra trás.",
         respostaCorreta: "frente", 
-        explicacao: "Explique aqui por que a FRENTE da carta A7 é a resposta certa."
+        explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa ir embora, se retirar, fugir, escapar."
     },
     {
         id: "A8",
