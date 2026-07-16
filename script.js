@@ -30,9 +30,9 @@ const dadosPerguntas = [
     },
     {
         id: "A5",
-        texto: "Digite aqui a pergunta para a carta A5...",
+        texto: "Um bichinho pequeno que causa grande incômodo, fazendo a pessoa desconfiar de tudo.",
         respostaCorreta: "verso", 
-        explicacao: "Explique aqui por que a FRENTE da carta A5 é a resposta certa."
+        explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa estar desconfiado com algo."
     },
     {
         id: "A6",
