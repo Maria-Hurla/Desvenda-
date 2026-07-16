@@ -24,7 +24,7 @@ const dadosPerguntas = [
     },
     {
         id: "A4",
-        texto: "4- Não é receita de cozinha, mas envolve descanso forçado e tempo parado.  ",
+        texto: "Não é receita de cozinha, mas envolve descanso forçado e tempo parado.  ",
         respostaCorreta: "verso", 
         explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa ficar de repouso, de folga ou espera."
     },
@@ -36,9 +36,9 @@ const dadosPerguntas = [
     },
     {
         id: "A6",
-        texto: "Digite aqui a pergunta para a carta A6...",
+        texto: "Não é na cozinha, mas dói igual, quando a vida exige esforço pesado.",
         respostaCorreta: "verso", 
-        explicacao: "Explique aqui por que o VERSO da carta A6 é a resposta certa."
+        explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa trabalhar ou estudar muito, para conseguir o objetivo esperado."
     },
     {
         id: "A7",
