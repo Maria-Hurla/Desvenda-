@@ -19,103 +19,103 @@ const dadosPerguntas = [
     },
     {
         id: "A4",
-        texto: "Não é receita de cozinha, mas envolve descanso forçado e tempo parado.  ",
+        texto: "Não é receita de cozinha, mas envolve descanso forçado e tempo parado. Quem sou eu?",
         respostaCorreta: "verso", 
         explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa ficar de repouso, de folga ou espera."
     },
     {
         id: "A5",
-        texto: "Um bichinho pequeno que causa grande incômodo, fazendo a pessoa desconfiar de tudo.",
+        texto: "Um bichinho pequeno que causa grande incômodo, fazendo a pessoa desconfiar de tudo. Quem sou eu?",
         respostaCorreta: "verso", 
         explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa estar desconfiado com algo."
     },
     {
         id: "A6",
-        texto: "Não é na cozinha, mas dói igual, quando a vida exige esforço pesado.",
+        texto: "Não é na cozinha, mas dói igual, quando a vida exige esforço pesado. Quem sou eu?",
         respostaCorreta: "verso", 
         explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa trabalhar ou estudar muito, para conseguir o objetivo esperado."
     },
     {
         id: "A7",
-        texto: "Quando o perigo aparece, o jeito é sair correndo sem olhar pra trás.",
+        texto: "Quando o perigo aparece, o jeito é sair correndo sem olhar pra trás. Quem sou eu?",
         respostaCorreta: "frente", 
         explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa ir embora, se retirar, fugir, escapar."
     },
     {
         id: "A8",
-        texto: " Não é árvore, mas ajuda, quando alguém improvisa pra resolver um problema.",
+        texto: " Não é árvore, mas ajuda, quando alguém improvisa pra resolver um problema. Quem sou eu?",
         respostaCorreta: "verso", 
         explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa resolver um problema, desenrascar em uma situação difícil, ou prestar favor a alguém."
     },
     {
         id: "A9",
-        texto: "Não é inseto de verdade, mas aparece quando a emoção toma conta.",
+        texto: "Não é inseto de verdade, mas aparece quando a emoção toma conta. Quem sou eu?",
         respostaCorreta: "frente", 
         explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa representar emoções intensas, como nervosismo, ansiedade, medo, ou apaixonado."
     },
     {
         id: "A10",
-        texto: " É estar presente sem ser chamado, quando dois se divertem e um sobra.",
+        texto: " É estar presente sem ser chamado, quando dois se divertem e um sobra. Quem sou eu?",
         respostaCorreta: "verso", 
         explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa acompanhar um ou mais casais, sendo a única(o) solteira(o)."
     },
     {
         id: "A11",
-        texto: "Não é moda nem calçado, mas significa o fim da caminhada.",
+        texto: "Não é moda nem calçado, mas significa o fim da caminhada. Quem sou eu?",
         respostaCorreta: "verso",
         explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa morrer/falecer."
     },
     {
         id: "A12",
-        texto: "Não é com a boca apenas, mas parece que não há fim na conversa.",
+        texto: "Não é com a boca apenas, mas parece que não há fim na conversa. Quem sou eu?",
         respostaCorreta: "verso", 
         explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa uma pessoa que fala demais, é tagarela, não para de conversar ou falar."
     },
     {
         id: "A13",
-        texto: "Não decide por si mesma, apenas segue o grupo sem pensar.",
+        texto: "Não decide por si mesma, apenas segue o grupo sem pensar. Quem sou eu?",
         respostaCorreta: "frente", 
         explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa uma pessoa sem opinião própria, que é influenciada facilmente."
     },
     {
         id: "A14",
-        texto: " É agir devagar, com calma, depois de uma briga com alguém.",
+        texto: " É agir devagar, com calma, depois de uma briga com alguém. Quem sou eu?",
         respostaCorreta: "verso", 
         explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa que alguém deve agir com calma e discretamente."
     },
     {
         id: "A15",
-        texto: "É sinal de começo, marca a infância antes da vida adulta.",
+        texto: "É sinal de começo, marca a infância antes da vida adulta. Quem sou eu?",
         respostaCorreta: "frente", 
         explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa que são os primeiros dentes de uma pessoa."
     },
     {
         id: "A16",
-        texto: "Sou uma comida, servido em pedaços pequenos e sou confundido com duas aves.",
+        texto: "Sou uma comida, servido em pedaços pequenos e sou confundido com duas aves. Quem sou eu?",
         respostaCorreta: "verso", 
         explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa que é um tipo de corte de carne de frango."
     },
     {
         id: "A17",
-        texto: "Não caio do céu de verdade, mas é jeito de falar. Quando tudo parece perigoso, assim costumam me chamar.",
+        texto: "Não caio do céu de verdade, mas é jeito de falar. Quando tudo parece perigoso, assim costumam me chamar. Quem sou eu?",
         respostaCorreta: "frente", 
         explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa que é uma chuva muito forte."
     },
     {
         id: "A18",
-        texto: "Em um sentido eu ganho muito dinheiro, em outro, me dão a culpa por algo que nem fiz.",
+        texto: "Em um sentido eu ganho muito dinheiro, em outro, me dão a culpa por algo que nem fiz. Quem sou eu?",
         respostaCorreta: "verso", 
         explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa assumir a culpa ou arcar com as consequências."
     },
     {
         id: "A19",
-        texto: "Tem dinheiro no bolso, mas cada gasto parece uma despedida dolorida. Sofre mais para abrir a carteira do que para ganhar dinheiro.",
+        texto: "Tem dinheiro no bolso, mas cada gasto parece uma despedida dolorida. Sofre mais para abrir a carteira do que para ganhar dinheiro. Quem sou eu?",
         respostaCorreta: "frente", 
         explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa uma pessoa que evita ao máximo gastar dinheiro, até com necessidades básicas."
     },
     {
         id: "A20",
-        texto: "Quando alguém irrita muito, ele enche algo.",
+        texto: "Quando alguém irrita muito, ele enche algo. Quem sou eu?",
         respostaCorreta: "verso", 
         explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa uma pessoa que irrita demais."
     }
