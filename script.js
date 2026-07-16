@@ -1,8 +1,3 @@
-// =========================================================================
-// GABARITO DO SEU JOGO (Personalize as 20 cartas aqui embaixo!)
-// =========================================================================
-// IMPORTANTE: Em "respostaCorreta", digite apenas "frente" ou "verso" (minúsculo)
-// =========================================================================
 const dadosPerguntas = [
     {
         id: "A1",
@@ -234,7 +229,7 @@ function sortearArray(array) {
 window.verificarResposta = function(escolha) {
     botoesQuiz.forEach(btn => btn.disabled = true);
     
-    // Verifica se a escolha do jogador casa com a "respostaCorreta" definida por você
+    // Verifica se a escolha do jogador casa com a "respostaCorreta"
     if (escolha === cartaAtual.respostaCorreta) {
         pontuacao++;
         atualizarPlacar();
@@ -243,7 +238,7 @@ window.verificarResposta = function(escolha) {
         mostrarFeedback(false);
     }
 
-    // Aguarda 5 segundos mostrando a resposta e então abre o modal explicativo
+    // Aguarda 2 segundos mostrando a resposta e então abre o modal explicativo
     setTimeout(mostrarExplicacao, 2000);
 }
 
