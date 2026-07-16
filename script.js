@@ -90,9 +90,9 @@ const dadosPerguntas = [
     },
     {
         id: "A15",
-        texto: "Digite aqui a pergunta para a carta A15...",
+        texto: "É sinal de começo, marca a infância antes da vida adulta.",
         respostaCorreta: "frente", 
-        explicacao: "Explique aqui por que a FRENTE da carta A15 é a resposta certa."
+        explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa que são os primeiros dentes de uma pessoa."
     },
     {
         id: "A16",
