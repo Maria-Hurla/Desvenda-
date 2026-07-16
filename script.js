@@ -60,9 +60,9 @@ const dadosPerguntas = [
     },
     {
         id: "A10",
-        texto: "Digite aqui a pergunta para a carta A10...",
+        texto: " É estar presente sem ser chamado, quando dois se divertem e um sobra.",
         respostaCorreta: "verso", 
-        explicacao: "Explique aqui por que o VERSO da carta A10 é a resposta certa."
+        explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa acompanhar um ou mais casais, sendo a única(o) solteira(o)."
     },
     {
         id: "A11",
