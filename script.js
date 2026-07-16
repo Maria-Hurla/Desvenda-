@@ -108,9 +108,9 @@ const dadosPerguntas = [
     },
     {
         id: "A18",
-        texto: "Digite aqui a pergunta para a carta A18...",
+        texto: "Em um sentido eu ganho muito dinheiro, em outro, me dão a culpa por algo que nem fiz.",
         respostaCorreta: "verso", 
-        explicacao: "Explique aqui por que o VERSO da carta A18 é a resposta certa."
+        explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa assumir a culpa ou arcar com as consequências."
     },
     {
         id: "A19",
