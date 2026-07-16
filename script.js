@@ -102,9 +102,9 @@ const dadosPerguntas = [
     },
     {
         id: "A17",
-        texto: "Digite aqui a pergunta para a carta A17...",
+        texto: "Não caio do céu de verdade, mas é jeito de falar. Quando tudo parece perigoso, assim costumam me chamar.",
         respostaCorreta: "frente", 
-        explicacao: "Explique aqui por que a FRENTE da carta A17 é a resposta certa."
+        explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa que é uma chuva muito forte."
     },
     {
         id: "A18",
