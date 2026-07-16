@@ -114,9 +114,9 @@ const dadosPerguntas = [
     },
     {
         id: "A19",
-        texto: "Digite aqui a pergunta para a carta A19...",
+        texto: "Tem dinheiro no bolso, mas cada gasto parece uma despedida dolorida. Sofre mais para abrir a carteira do que para ganhar dinheiro.",
         respostaCorreta: "frente", 
-        explicacao: "Explique aqui por que a FRENTE da carta A19 é a resposta certa."
+        explicacao: "Explicação correta (não como a pessoa neurodivergente imagina): Significa uma pessoa que evita ao máximo gastar dinheiro, até com necessidades básicas."
     },
     {
         id: "A20",
