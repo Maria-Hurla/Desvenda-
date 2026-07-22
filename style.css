@@ -453,3 +453,40 @@ body {
     background-color: #ffd966;
     transform: scale(1.05); /* Efeito de aumentar de leve ao passar o mouse */
 }
+
+/* CONSERTO PARA IMAGEM INVISÍVEL DA FRENTE */
+
+/* 1. Garante que as imagens ocupem a carta inteira e fiquem visíveis */
+#img-frente, #img-verso, #img-pergunta {
+    width: 100%;
+        height: 100%;
+            object-fit: contain; /* Mantém a proporção da imagem sem esticar */
+                display: block !important;
+                    visibility: visible !important;
+                        opacity: 1 !important;
+                        }
+
+                        /* 2. Corrige o alinhamento das duas faces da carta */
+                        .carta-frente, .frente {
+                            position: absolute;
+                                width: 100%;
+                                    height: 100%;
+                                        backface-visibility: hidden;
+                                            -webkit-backface-visibility: hidden;
+                                                top: 0;
+                                                    left: 0;
+                                                        z-index: 2; /* Garante que a frente fique por cima quando desvirada */
+                                                        }
+
+                                                        /* 3. Garante que o verso fique atrás da frente enquanto não estiver virada */
+                                                        .carta-verso, .verso {
+                                                            position: absolute;
+                                                                width: 100%;
+                                                                    height: 100%;
+                                                                        backface-visibility: hidden;
+                                                                            -webkit-backface-visibility: hidden;
+                                                                                top: 0;
+                                                                                    left: 0;
+                                                                                        transform: rotateY(180deg);
+                                                                                            z-index: 1;
+                                                                                            }
