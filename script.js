@@ -190,29 +190,32 @@ function iniciarJogo() {
     esconderTodasTelas();
     telaJogo.classList.remove('oculta');
     
-    carregarCarta();
 }
 
 function carregarCarta() {
-    cartaAtual = cartasSorteadas[indiceAtual];
-    
-    elCartaAtualNumero.textContent = indiceAtual + 1;
-    
-    // Alimenta a pergunta e altera o caminho da imagem correspondente
-    elNumeroCarta.textContent = cartaAtual.id;
-    elTextoPergunta.textContent = cartaAtual.texto;
-    elImgPergunta.src = `imagens/${cartaAtual.id}_pergunta.png`;
-    
-    // Alimenta a carta de resposta com a frente e verso do ID atual
-    elImgFrente.src = `imagens/${cartaAtual.id}_frente.png`;
-    elImgVerso.src = `imagens/${cartaAtual.id}_verso.png`;
-    
-    // Reseta o estado da animação da carta para ela começar desvirada
-    cartaFlip.classList.remove('virada'); 
-    msgFeedback.classList.add('oculta');
-    
-    botoesQuiz.forEach(btn => btn.disabled = false);
-}
+        cartaAtual = cartasSorteadas[indiceAtual];
+            
+                elCartaAtualNumero.textContent = indiceAtual + 1;
+                    
+                        // 1. DESVIRA A CARTA INSTANTANEAMENTE (Antes de trocar a imagem)
+                            cartaFlip.style.transition = 'none'; // Desativa temporariamente a animação
+                                cartaFlip.classList.remove('virada'); // Volta para a frente
+                                    void cartaFlip.offsetWidth; // TRUQUE: Força o navegador a redesenhar o elemento no exato milissegundo
+                                        cartaFlip.style.transition = ''; // Reativa a animação para os próximos cliques
+
+                                            // 2. Alimenta a pergunta e altera a imagem da pergunta
+                                                elNumeroCarta.textContent = cartaAtual.id;
+                                                    elTextoPergunta.textContent = cartaAtual.texto;
+                                                        elImgPergunta.src = `imagens/${cartaAtual.id}_pergunta.png`;
+                                                            
+                                                                // 3. Agora sim altera as imagens de Frente e Verso sem travar a tela
+                                                                    elImgFrente.src = `imagens/${cartaAtual.id}_frente.png`;
+                                                                        elImgVerso.src = `imagens/${cartaAtual.id}_verso.png`;
+                                                                            
+                                                                                msgFeedback.classList.add('oculta');
+                                                                                    
+                                                                                        botoesQuiz.forEach(btn => btn.disabled = false);
+                                                                                        }
 
 // Algoritmo Fisher-Yates para embaralhar o deck
 function sortearArray(array) {
