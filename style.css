@@ -453,11 +453,3 @@ body {
     background-color: #ffd966;
     transform: scale(1.05); /* Efeito de aumentar de leve ao passar o mouse */
 }
-
-/* Força o navegador e a placa de vídeo a redesenharem a carta instantaneamente */
-.frente, .verso, .carta-frente, .carta-verso, .carta-imagem {
-    will-change: transform, opacity; /* Avisa ao navegador que o elemento muda constantemente */
-        -webkit-backface-visibility: hidden;
-            backface-visibility: hidden; /* Evita fantasmas visuais no verso */
-                transform: translateZ(0); /* Força a aceleração de hardware */
-                }
