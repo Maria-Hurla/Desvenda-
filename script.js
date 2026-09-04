@@ -189,9 +189,8 @@ function iniciarJogo() {
     
     esconderTodasTelas();
     telaJogo.classList.remove('oculta');
-
-    carregarCarta();
     
+    carregarCarta(); 
 }
 
 function carregarCarta() {
