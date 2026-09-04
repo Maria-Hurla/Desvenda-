@@ -229,24 +229,30 @@ function sortearArray(array) {
 // ==========================================
 // LÓGICA DO QUIZ
 // ==========================================
-window.verificarResposta = function(escolha) {
+function verificarResposta(opcaoSelecionada) {
+    // 1. Proteção contra o erro 'Cannot read properties of null':
     if (!cartaAtual) {
-        console.error("A carta atual não foi carregada corretamente.");
+        console.error("Erro: Nenhuma carta foi carregada ainda.");
         return;
     }
-    
+
+    // 2. Desativa os botões para evitar que o jogador clique várias vezes
     botoesQuiz.forEach(btn => btn.disabled = true);
-    
-    if (escolha === cartaAtual.respostaCorreta) {
-        pontuacao++;
-        atualizarPlacar();
-        mostrarFeedback(true);
-    } else {
-        mostrarFeedback(false);
+
+    // 3. O QUE ACONTECE SE ACERTAR (DENTRO DO IF):
+    if (opcaoSelecionada === cartaAtual.respostaCorreta) {
+        pontuacao++;            // Soma +1 ponto na pontuação
+        atualizarPlacar();      // Atualiza os pontos visíveis na tela
+        mostrarFeedback(true);  // Mostra o sinal/mensagem de acerto (ex: verde)
+    } 
+    // 4. O QUE ACONTECE SE ERRAR (DENTRO DO ELSE):
+    else {
+        mostrarFeedback(false); // Mostra o sinal/mensagem de erro (ex: vermelho)
     }
 
+    // 5. Aguarda 1,5 segundo para o jogador ver o feedback e abre a explicação
     setTimeout(mostrarExplicacao, 1500);
-};
+}
 
 function mostrarFeedback(acertou) {
     msgFeedback.classList.remove('oculta', 'msg-correta', 'msg-errada');
