@@ -230,9 +230,13 @@ function sortearArray(array) {
 // LÓGICA DO QUIZ
 // ==========================================
 window.verificarResposta = function(escolha) {
+    if (!cartaAtual) {
+        console.error("A carta atual não foi carregada corretamente.");
+        return;
+    }
+    
     botoesQuiz.forEach(btn => btn.disabled = true);
     
-    // Verifica se a escolha do jogador casa com a "respostaCorreta"
     if (escolha === cartaAtual.respostaCorreta) {
         pontuacao++;
         atualizarPlacar();
@@ -241,9 +245,8 @@ window.verificarResposta = function(escolha) {
         mostrarFeedback(false);
     }
 
-    // Aguarda 2 segundos mostrando a resposta e então abre o modal explicativo
-    setTimeout(mostrarExplicacao, 2000);
-}
+    setTimeout(mostrarExplicacao, 1500);
+};
 
 function mostrarFeedback(acertou) {
     msgFeedback.classList.remove('oculta', 'msg-correta', 'msg-errada');
@@ -266,6 +269,10 @@ function atualizarPlacar() {
 // EXPLICAÇÃO E FLUXO DE RODADAS
 // ==========================================
 function mostrarExplicacao() {
+    if (!modalExplicacao || !elTextoExplicacao) {
+        alert("Erro: Verifique se os elementos 'modal-explicacao' e 'texto-explicacao' existem no seu index.html!");
+        return;
+    }
     elTextoExplicacao.textContent = cartaAtual.explicacao;
     modalExplicacao.classList.remove('oculta');
 }
