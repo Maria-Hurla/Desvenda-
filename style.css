@@ -230,17 +230,25 @@ body {
     font-weight: 600;
 }
 
-/* Carta Imagem (Flip Card 3D) */
+/* =========================================================================
+   CARTA FLIP 3D OTIMIZADA PARA MOBILE E GPU
+   ========================================================================= */
+
 .area-imagem {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.carta-container {
+    margin-top: 20px;
+}
+
 .carta-imagem {
     width: 260px;
     height: 380px;
     perspective: 1000px;
+    -webkit-perspective: 1000px;
     cursor: pointer;
     z-index: 2;
 }
@@ -249,8 +257,10 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
-    transition: transform 0.8s;
+    transition: transform 0.6s ease;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    will-change: transform;
 }
 
 .carta-imagem.virada .carta-inner {
@@ -261,21 +271,42 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     overflow: hidden;
     border: 5px solid var(--branco);
+    background-color: var(--branco);
 }
 
-.face img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.frente {
+    z-index: 2;
+    transform: rotateY(0deg);
 }
 
 .verso {
+    z-index: 1;
     transform: rotateY(180deg);
+}
+
+/* Quando a carta virar, inverte o z-index para não sobrecarregar a GPU */
+.carta-imagem.virada .frente {
+    z-index: 1;
+}
+
+.carta-imagem.virada .verso {
+    z-index: 2;
+}
+
+/* Configuração universal das imagens das cartas */
+#img-frente, #img-verso, #img-pergunta {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .dica-clique {
@@ -381,6 +412,26 @@ body {
     line-height: 1.6;
 }
 
+/* Botão de Ajuste de Zoom */
+.botao-ajuda-zoom {
+    background-color: #ffeeba;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 15px auto;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.botao-ajuda-zoom:hover {
+    background-color: #ffd966;
+    transform: scale(1.05);
+}
+
 /* Animações */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
@@ -409,84 +460,3 @@ body {
     .area-pergunta { grid-row: 2; }
     .area-quiz { grid-row: 3; }
 }
-
-/* =========================================================================
-    (FRENTE E VERSO NO MESMO LUGAR)
-   ========================================================================= */
-
-.frente, .verso {
-    /* Força as cartas a ficarem uma exatamente em cima da outra */
-    position: absolute !important; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
-
-/* Garante que o verso comece virado de costas, mas no mesmo ponto */
-.verso {
-    transform: rotateY(180deg);
-}
-
-/* Cria um espaço seguro acima da carta para o balãozinho não cortar */
-.carta-container {
-    margin-top: 50px !important; 
-}
-/* Botão de Ajuste de Zoom (Tela Inicial) */
-.botao-ajuda-zoom {
-    background-color: #ffeeba;
-    color: #856404;
-    border: 1px solid #ffeeba;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    margin: 15px auto;
-    display: block; /* Garante que fique centralizado */
-    transition: all 0.2s ease;
-}
-
-.botao-ajuda-zoom:hover {
-    background-color: #ffd966;
-    transform: scale(1.05); /* Efeito de aumentar de leve ao passar o mouse */
-}
-
-/* CONSERTO PARA IMAGEM INVISÍVEL DA FRENTE */
-
-/* 1. Garante que as imagens ocupem a carta inteira e fiquem visíveis */
-#img-frente, #img-verso, #img-pergunta {
-    width: 100%;
-        height: 100%;
-            object-fit: contain; /* Mantém a proporção da imagem sem esticar */
-                display: block !important;
-                    visibility: visible !important;
-                        opacity: 1 !important;
-                        }
-
-                        /* 2. Corrige o alinhamento das duas faces da carta */
-                        .carta-frente, .frente {
-                            position: absolute;
-                                width: 100%;
-                                    height: 100%;
-                                        backface-visibility: hidden;
-                                            -webkit-backface-visibility: hidden;
-                                                top: 0;
-                                                    left: 0;
-                                                        z-index: 2; /* Garante que a frente fique por cima quando desvirada */
-                                                        }
-
-                                                        /* 3. Garante que o verso fique atrás da frente enquanto não estiver virada */
-                                                        .carta-verso, .verso {
-                                                            position: absolute;
-                                                                width: 100%;
-                                                                    height: 100%;
-                                                                        backface-visibility: hidden;
-                                                                            -webkit-backface-visibility: hidden;
-                                                                                top: 0;
-                                                                                    left: 0;
-                                                                                        transform: rotateY(180deg);
-                                                                                            z-index: 1;
-                                                                                            }
